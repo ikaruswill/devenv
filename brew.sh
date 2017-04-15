@@ -25,11 +25,13 @@ brew upgrade --all
 
 brew install git
 
-# Install Python
+# Install default python interpreters
+# To avoid messing with OS X python
 brew install python
 brew install python3
 
 brew install docker
+brew install node
 
 # Install cask
 brew install caskroom/cask/brew-cask
