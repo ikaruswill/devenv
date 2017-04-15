@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
+
+# Activate sudo and ask for password
 sudo -v
+
+# Keep sudo alive
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Check if brew exists
 # ruby -e: single command mode
