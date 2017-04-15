@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 
-# Activate sudo and ask for password
-sudo -v
-
-# Keep sudo alive
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 # Check if brew exists
 # ruby -e: single command mode
 # curl -f: fail silently
@@ -74,8 +68,5 @@ brew cask install adobe-reader
 brew cask install franz
 brew cask install vox
 brew cask install vlc
-
-brew install dark-mode # Activate OS X dark mode via cli
-dark-mode on
 
 brew cleanup
