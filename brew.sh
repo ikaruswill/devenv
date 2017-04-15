@@ -69,13 +69,6 @@ brew cask install franz
 brew cask install vox
 brew cask install vlc
 
-# Install App Store Apps
-brew install mas
-mas signin %EMAIL%
-mas upgrade
-mas install 937984704 # Amphetamine
-mas install 1176895641 # Spark
-
 brew install dark-mode # Activate OS X dark mode via cli
 dark-mode on
 
