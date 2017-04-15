@@ -46,7 +46,6 @@ brew cask install atom
 brew cask install brackets
 brew cask install postman
 brew cask install gitkraken
-brew cask install miniconda
 brew cask install java
 
 # Install database tools
