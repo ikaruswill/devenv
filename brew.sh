@@ -45,7 +45,6 @@ brew cask install flux
 brew cask install spectacle
 brew cask install the-unarchiver
 brew cask install android-file-transfer
-brew cask install android-studio
 
 # Install developer tools
 brew cask install sublime-text
