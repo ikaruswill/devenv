@@ -17,55 +17,21 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade --all
 
-brew install git
+# Install Bash 4
+brew install bash
+sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+chsh -s /usr/local/bin/bash
 
-# Install default python interpreters
-# To avoid messing with OS X python
-brew install python
-brew install python3
+# Enable autocd by typing the folder name only
+echo '
+# Enable autocd by typing the folder name only
+shopt -s autocd' >> ~/.bash_profile
 
-brew install docker
-brew install node
-
-# Install cask
-brew install caskroom/cask/brew-cask
-
-# Install mac productivity tools
-brew cask install alfred # License
-brew cask install iterm2
-brew cask install bartender # License
-brew cask install fantastical # License
-brew cask install spectacle
-brew cask install the-unarchiver
-brew cask install android-file-transfer
-
-# Install developer tools
-brew cask install sublime-text
-brew cask install atom
-brew cask install brackets
-brew cask install postman
-brew cask install gitkraken
-brew cask install java
-
-# Install database tools
-brew cask install sequel-pro
-brew cask install postico
-
-# Install virtualization tools
-brew cask install virtualbox
-brew cask install vagrant
-
-# Install general productivity tools
-brew cask install firefox
-brew cask install google-chrome
-brew cask install opera
-brew cask install dropbox
-brew cask install google-drive
-brew cask install adobe-reader
-
-# Install media apps
-brew cask install franz
-brew cask install vox
-brew cask install vlc
+# ls immediately after cd
+echo '
+# ls immediately after cd
+function cd {
+    builtin cd "$@" && ls -F
+}' >> ~/.bash_profile
 
 brew cleanup
