@@ -2,9 +2,10 @@
 
 brew cask install miniconda
 
-# Link miniconda
-echo '# Link system python before miniconda root environment' >> ~/.bash_profile
-echo 'PATH="$PATH:'$HOME'/miniconda3/bin"' >> ~/.bash_profile
+# Link miniconda with priority to system python
+echo '
+# Link system python before miniconda root environment
+PATH="$PATH:'$HOME'/miniconda3/bin"' >> ~/.bash_profile
 
 source ~/.bash_profile
 
