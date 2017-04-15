@@ -35,7 +35,6 @@ brew cask install alfred # License
 brew cask install iterm2
 brew cask install bartender # License
 brew cask install fantastical # License
-brew cask install flux
 brew cask install spectacle
 brew cask install the-unarchiver
 brew cask install android-file-transfer
