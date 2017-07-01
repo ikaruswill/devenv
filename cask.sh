@@ -35,7 +35,7 @@ brew cask install google-drive
 brew cask install adobe-reader
 
 # Install media apps
-brew cask install franz
+brew cask install rambox
 brew cask install vox
 brew cask install vlc
 
