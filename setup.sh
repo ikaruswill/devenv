@@ -20,3 +20,4 @@ chmod 744 *
 ./conda.sh
 ./osx.sh
 ./bash.sh
+./atom.sh
