@@ -21,3 +21,7 @@ shopt -s autocd
 function cd {
     builtin cd "$@" && ls -F
 }
+
+# Fix invalid terminal locale issue
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
