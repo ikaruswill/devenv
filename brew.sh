@@ -22,8 +22,15 @@ brew install bash
 sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 chsh -s /usr/local/bin/bash
 
-# Install Python2 and Python3
+# Install git
+brew install git
+
+# To avoid messing with OS X python
 brew install python
 brew install python3
+
+# Docker requires virtualbox
+brew install docker
+brew install node
 
 brew cleanup

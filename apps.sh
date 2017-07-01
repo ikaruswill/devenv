@@ -1,11 +1,3 @@
-# Install git
-brew install git
-
-# Install default python interpreters
-# To avoid messing with OS X python
-brew install python
-brew install python3
-
 # Install cask
 brew install caskroom/cask/brew-cask
 
@@ -46,9 +38,5 @@ brew cask install adobe-reader
 brew cask install franz
 brew cask install vox
 brew cask install vlc
-
-# Docker requires virtualbox
-brew install docker
-brew install node
 
 brew cleanup
