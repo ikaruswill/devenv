@@ -19,3 +19,4 @@ chmod 744 *
 ./appstore.sh
 ./conda.sh
 ./osx.sh
+./bash.sh

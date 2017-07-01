@@ -26,16 +26,4 @@ chsh -s /usr/local/bin/bash
 brew install python
 brew install python3
 
-# Enable autocd by typing the folder name only
-echo '
-# Enable autocd by typing the folder name only
-shopt -s autocd' >> ~/.bash_profile
-
-# ls immediately after cd
-echo '
-# ls immediately after cd
-function cd {
-    builtin cd "$@" && ls -F
-}' >> ~/.bash_profile
-
 brew cleanup

@@ -9,13 +9,6 @@ chmod u+x $CONDASCRIPT
 ./$CONDASCRIPT
 rm $CONDASCRIPT
 
-# Link miniconda with priority to system python
-echo '
-# Link system python before miniconda root environment
-PATH="$PATH:'$HOME'/miniconda3/bin"' >> ~/.bash_profile
-
-source ~/.bash_profile
-
 # Add conda forge repository
 conda config --add channels conda-forge
 
