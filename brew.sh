@@ -22,6 +22,10 @@ brew install bash
 sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 chsh -s /usr/local/bin/bash
 
+# Install Python2 and Python3
+brew install python
+brew install python3
+
 # Enable autocd by typing the folder name only
 echo '
 # Enable autocd by typing the folder name only
