@@ -1,0 +1,69 @@
+"*":
+  "atom-clock": {}
+  "atom-terminal":
+    app: "iTerm.app"
+    surpressDirectoryArgument: false
+  "autocomplete-python":
+    extraPaths: "$PROJECT/bolt/apps/"
+    useKite: false
+  core:
+    disabledPackages: [
+      "minimap-autohide"
+      "docblockr"
+    ]
+    packagesWithKeymapsDisabled: []
+    projectHome: "$HOME/Dev"
+    telemetryConsent: "limited"
+    themes: [
+      "seti-ui"
+      "flatland-dark"
+    ]
+    titleBar: "custom"
+  editor:
+    fontFamily: "Inconsolata"
+  "exception-reporting":
+    userId: "ff279c35-0461-40b8-dbbb-67ed8b54de5d"
+  "find-and-replace":
+    scrollToResultOnLiveSearch: true
+  linter:
+    disabledProviders: [
+      "pycodestyle"
+    ]
+  "linter-ui-default":
+    panelHeight: 56
+  minimap:
+    disablePythonDocLinks: true
+    plugins:
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      linter: true
+      linterDecorationsZIndex: 0
+      "minimap-autohide": true
+      "minimap-autohideDecorationsZIndex": 0
+      selection: true
+      selectionDecorationsZIndex: 0
+  "project-manager":
+    alwaysOpenInSameWindow: true
+    includeGitRepositories: true
+    savePathsRelativeToHome: true
+    sortBy: "last modified"
+  "seti-ui": {}
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    scrollSyncType: "Vertical + Horizontal"
+  "status-bar": {}
+  tabs: {}
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
