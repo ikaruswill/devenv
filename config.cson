@@ -10,6 +10,19 @@
     disabledPackages: [
       "minimap-autohide"
       "docblockr"
+      "autocomplete-python"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.ini"
+      "*.pyc"
+      "venv"
+      "env"
     ]
     packagesWithKeymapsDisabled: []
     projectHome: "$HOME/Dev"
@@ -64,6 +77,5 @@
   tabs: {}
   "tree-view":
     hideIgnoredNames: true
-    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
