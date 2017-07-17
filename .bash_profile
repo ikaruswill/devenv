@@ -10,6 +10,11 @@ function linkvenv {
 	ln -s ~/miniconda3/envs/${PWD##*/} venv
 }
 
+# activate venv when in working directory
+function actenv {
+	source activate ${PWD##*/}
+}
+
 # ====================
 # Miscellaneous
 # ====================
