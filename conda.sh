@@ -9,6 +9,8 @@ chmod u+x $CONDASCRIPT
 ./$CONDASCRIPT
 rm $CONDASCRIPT
 
+source ~/.bash_profile
+
 # Add conda forge repository
 conda config --add channels conda-forge
 

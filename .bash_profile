@@ -24,7 +24,7 @@ shopt -s autocd
 
 # ls immediately after cd
 function cd {
-    builtin cd "$@" && ls -F
+    builtin cd "$@" && ls -lah
 }
 
 # Fix invalid terminal locale issue
