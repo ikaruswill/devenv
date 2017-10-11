@@ -13,7 +13,6 @@ brew cask install android-file-transfer
 # Install developer tools
 brew cask install sublime-text
 brew cask install atom
-brew cask install brackets
 brew cask install postman
 brew cask install gitkraken
 brew cask install java

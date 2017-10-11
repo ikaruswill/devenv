@@ -16,3 +16,16 @@ wget https://github.com/google/fonts/blob/master/ofl/inconsolata/Inconsolata-Bol
 cp * ~/Library/Fonts/
 popd
 rm -r inconsolata
+
+# Remove GarageBand
+rm -rf /Applications/GarageBand.app
+rm -rf /Library/Application\ Support/GarageBand
+rm -rf /Library/Application\ Support/Logic/
+rm -rf /Library/Audio/Apple\ Loops
+rm -rf /Library/Audio/Apple\ Loops\ Index
+
+# Remove other MacOS default Apps
+rm -rf /Applications/iMovie.app
+rm -rf /Applications/Keynote.app
+rm -rf /Applications/Numbers.app
+rm -rf /Applications/Pages.app
