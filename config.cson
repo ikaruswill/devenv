@@ -10,7 +10,7 @@
     disabledPackages: [
       "minimap-autohide"
       "docblockr"
-      "autocomplete-python"
+      "linter-pycodestyle"
     ]
     ignoredNames: [
       ".git"
@@ -24,8 +24,10 @@
       "venv"
       "env"
     ]
-    packagesWithKeymapsDisabled: []
-    projectHome: "$HOME/Dev"
+    packagesWithKeymapsDisabled: [
+      "zentabs"
+    ]
+    projectHome: "~/Dev"
     telemetryConsent: "limited"
     themes: [
       "seti-ui"
@@ -34,16 +36,23 @@
     titleBar: "custom"
   editor:
     fontFamily: "Inconsolata"
+    scrollSensitivity: 60
   "exception-reporting":
     userId: "ff279c35-0461-40b8-dbbb-67ed8b54de5d"
   "find-and-replace":
     scrollToResultOnLiveSearch: true
   linter:
     disabledProviders: [
-      "pycodestyle"
+      "Pylint"
     ]
+  "linter-pycodestyle":
+    executablePath: "venv/bin/pycodestyle"
+  "linter-pylint":
+    executablePath: "%p/venv/bin/pylint"
+    pythonPath: "%p/venv/bin/python"
   "linter-ui-default":
     panelHeight: 56
+    statusBarRepresents: "Current File"
   minimap:
     disablePythonDocLinks: true
     plugins:
@@ -55,18 +64,18 @@
       "git-diffDecorationsZIndex": 0
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0
-      linter: true
+      linter: false
       linterDecorationsZIndex: 0
       "minimap-autohide": true
       "minimap-autohideDecorationsZIndex": 0
       selection: true
       selectionDecorationsZIndex: 0
   "project-manager":
-    alwaysOpenInSameWindow: true
     includeGitRepositories: true
     savePathsRelativeToHome: true
     sortBy: "last modified"
-  "seti-ui": {}
+  "seti-ui":
+    compactView: true
   "split-diff":
     diffWords: true
     ignoreWhitespace: true
@@ -75,7 +84,16 @@
     scrollSyncType: "Vertical + Horizontal"
   "status-bar": {}
   tabs: {}
+  "todo-show":
+    sortAscending: false
+    sortBy: "Type"
   "tree-view":
     hideIgnoredNames: true
   welcome:
     showOnStartup: false
+  whitespace: {}
+  zentabs:
+    maximumOpenedTabs: 6
+    neverCloseDirty: true
+    neverCloseNew: true
+    neverCloseUnsaved: true
