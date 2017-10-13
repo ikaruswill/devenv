@@ -3,14 +3,14 @@
 # ====================
 
 # Link system python before miniconda root environment
-PATH="$PATH:'$HOME'/miniconda3/bin"
+PATH="$PATH:$HOME/miniconda3/bin"
 
-# symlink venv to miniconda
-function linkvenv {
+# symlink env to miniconda
+function linkenv {
 	ln -s ~/miniconda3/envs/${PWD##*/} venv
 }
 
-# activate venv when in working directory
+# activate env when in working directory
 function actenv {
 	source activate ${PWD##*/}
 }

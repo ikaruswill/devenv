@@ -14,6 +14,7 @@ brew cask install android-file-transfer
 brew cask install sublime-text
 brew cask install atom
 brew cask install postman
+brew cask install insomnia
 brew cask install gitkraken
 brew cask install java
 
@@ -32,6 +33,7 @@ brew cask install opera
 brew cask install dropbox
 brew cask install google-drive
 brew cask install adobe-reader
+brew cask install skype
 
 # Install media apps
 brew cask install rambox
