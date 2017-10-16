@@ -9,6 +9,7 @@ brew cask install fantastical # License
 brew cask install spectacle
 brew cask install the-unarchiver
 brew cask install android-file-transfer
+brew cask install transmission-remote-gui
 
 # Install developer tools
 brew cask install sublime-text
