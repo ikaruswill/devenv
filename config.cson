@@ -5,11 +5,13 @@
     surpressDirectoryArgument: false
   "autocomplete-python":
     extraPaths: "$PROJECT/bolt/apps/"
+    pythonPaths: "$PROJECT/venv/python"
     useKite: false
+  "bracket-matcher": {}
+  "city-lights-ui": {}
   core:
     disabledPackages: [
       "minimap-autohide"
-      "docblockr"
       "linter-pycodestyle"
     ]
     ignoredNames: [
@@ -37,6 +39,7 @@
   editor:
     fontFamily: "Inconsolata"
     scrollSensitivity: 60
+    tabLength: 4
   "exception-reporting":
     userId: "ff279c35-0461-40b8-dbbb-67ed8b54de5d"
   "find-and-replace":
@@ -74,8 +77,11 @@
     includeGitRepositories: true
     savePathsRelativeToHome: true
     sortBy: "last modified"
+  "python-isort":
+    isortPath: "/Users/ikaruswill/miniconda3/envs/backend/bin/isort"
   "seti-ui":
     compactView: true
+    hideProjectTab: true
   "split-diff":
     diffWords: true
     ignoreWhitespace: true
