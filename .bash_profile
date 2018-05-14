@@ -5,6 +5,13 @@
 # Link system python before miniconda root environment
 PATH="$PATH:$HOME/miniconda3/bin"
 
+# make env with directory name
+function mkenv {
+	local env_name=`basename $PWD`
+	python_vers=${1:-3}
+	conda create -y -n $env_name python=$python_vers
+}
+
 # symlink env to miniconda
 function linkenv {
 	ln -s ~/miniconda3/envs/${PWD##*/} venv
