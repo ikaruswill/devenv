@@ -25,10 +25,10 @@ rm -rf /Library/Audio/Apple\ Loops
 rm -rf /Library/Audio/Apple\ Loops\ Index
 
 # Remove other MacOS default Apps
-rm -rf /Applications/iMovie.app
-rm -rf /Applications/Keynote.app
-rm -rf /Applications/Numbers.app
-rm -rf /Applications/Pages.app
+# rm -rf /Applications/iMovie.app
+# rm -rf /Applications/Keynote.app
+# rm -rf /Applications/Numbers.app
+# rm -rf /Applications/Pages.app
 
 # Disable auto-launch on USB connect for Android File Transfer
 PID=$(ps -fe | grep "[A]ndroid File Transfer Agent" | awk '{print $2}')
