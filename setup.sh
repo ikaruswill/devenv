@@ -16,6 +16,7 @@ read APPSTORE_PW
 chmod 744 *
 ./brew.sh
 ./cask.sh
+./git.sh
 ./appstore.sh
 ./conda.sh
 ./osx.sh
