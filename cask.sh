@@ -1,5 +1,9 @@
-# Install cask
+# Install cask and cask-fonts
 brew tap caskroom/cask
+brew tap caskroom/fonts
+
+# Install Inconsolata font
+brew cask install font-inconsolata
 
 # Install mac productivity tools
 brew cask install alfred # License
