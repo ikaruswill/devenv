@@ -6,4 +6,6 @@ Run `./setup.sh` in Terminal
 
 ## Extras
 To export atom settings:
-```apm list --installed --bare > packages.list```
+`apm list --installed --bare > packages.list`
+
+To restore alfred preferences, use the GUI to import `Alfred.alfredpreferences` from Dropbox
