@@ -1,5 +1,5 @@
 # Install cask
-brew install caskroom/cask/brew-cask
+brew tap caskroom/cask
 
 # Install mac productivity tools
 brew cask install alfred # License
@@ -26,6 +26,7 @@ brew cask install postico
 # Install virtualization tools
 brew cask install virtualbox
 brew cask install vagrant
+brew cask install docker
 
 # Install general productivity tools
 brew cask install firefox

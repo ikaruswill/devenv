@@ -33,7 +33,6 @@ brew install python
 brew install python3
 
 # Docker requires virtualbox
-brew install docker
 brew install node
 
 brew cleanup
