@@ -44,6 +44,7 @@ brew cask install skype
 # Install media apps
 brew cask install rambox
 brew cask install vox
+brew cask install vox-preferences-pane
 brew cask install vlc
 
 brew cleanup
