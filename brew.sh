@@ -32,7 +32,7 @@ brew install git
 brew install python
 brew install python3
 
-# Docker requires virtualbox
+# Install NodeJS
 brew install node
 
 brew cleanup
