@@ -4,9 +4,13 @@ sudo softwareupdate -iva
 # Install Xcode command line tools
 xcode-select --install
 
-brew install dark-mode # Activate OS X dark mode via cli
+# Activate OS X dark mode via cli
+brew install dark-mode
 dark-mode on
 brew remove dark-mode
+
+# Disable automatic rearrangement of spaces based on most recent use
+defaults write com.apple.dock mru-spaces -bool false
 
 # Remove GarageBand
 rm -rf /Applications/GarageBand.app
