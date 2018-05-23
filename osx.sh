@@ -12,6 +12,9 @@ brew remove dark-mode
 # Disable automatic rearrangement of spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
+# Restart Dock
+killall Dock
+
 # Remove GarageBand
 rm -rf /Applications/GarageBand.app
 rm -rf /Library/Application\ Support/GarageBand
