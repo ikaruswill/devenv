@@ -5,7 +5,7 @@ Automated installation of my personal development environment on MacOS
 Run `./setup.sh` in Terminal
 
 ## Extras
-To export atom settings:
-`apm list --installed --bare > packages.list`
+To export atom environment:
+`./helpers/export-atom.sh`
 
 To restore alfred preferences, use the GUI to import `Alfred.alfredpreferences` from Dropbox
