@@ -1,12 +1,15 @@
 "*":
+  "advanced-open-file":
+    createFileInstantly: true
   "atom-clock": {}
   "atom-terminal":
     app: "iTerm.app"
     surpressDirectoryArgument: false
   "autocomplete-python":
-    extraPaths: "$PROJECT/bolt/apps/"
-    pythonPaths: "$PROJECT/venv/python"
+    extraPaths: "$PROJECT/venv/python2.7/site-packages;$PROJECT/venv/python3.6/site-packages"
+    pythonPaths: "$PROJECT/venv/bin/python"
     useKite: false
+    useSnippets: "required"
   "bracket-matcher": {}
   "city-lights-ui": {}
   core:
@@ -78,7 +81,7 @@
     savePathsRelativeToHome: true
     sortBy: "last modified"
   "python-isort":
-    isortPath: "/Users/ikaruswill/miniconda3/envs/backend/bin/isort"
+    isortPath: "/usr/local/bin/isort"
   "seti-ui":
     compactView: true
     hideProjectTab: true
@@ -94,6 +97,7 @@
     sortAscending: false
     sortBy: "Type"
   "tree-view":
+    autoReveal: true
     hideIgnoredNames: true
   welcome:
     showOnStartup: false
