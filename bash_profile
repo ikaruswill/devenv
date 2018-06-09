@@ -47,3 +47,6 @@ export LANG=en_US.UTF-8
 
 # Postgres PGDATA path
 export PGDATA=/usr/local/var/postgres/
+
+# Reclaim ctrl-s hotkey for i-search
+stty -ixon
