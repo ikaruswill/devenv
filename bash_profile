@@ -22,6 +22,13 @@ function actenv {
 	source activate ${PWD##*/}
 }
 
+# remove env with directory name
+function rmenv {
+	local env_name=`basename $PWD`
+	python_vers=${1:-3}
+	conda remove -y -n ${PWD##*/} --all
+}
+
 # ====================
 # Miscellaneous
 # ====================
