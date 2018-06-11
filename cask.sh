@@ -38,7 +38,6 @@ brew cask install google-chrome
 brew cask install opera
 brew cask install dropbox
 brew cask install google-drive
-brew cask install adobe-reader
 brew cask install skype
 
 # Install media apps
