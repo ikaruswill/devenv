@@ -29,13 +29,11 @@ brew cask install postico
 
 # Install virtualization tools
 brew cask install virtualbox
-brew cask install vagrant
 brew cask install docker
 
 # Install general productivity tools
 brew cask install firefox
 brew cask install google-chrome
-brew cask install opera
 brew cask install dropbox
 brew cask install google-drive
 brew cask install skype
