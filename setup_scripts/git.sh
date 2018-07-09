@@ -1,2 +1,2 @@
-cp gitignore_global ~/.gitignore_global
+cp files/gitignore_global ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global

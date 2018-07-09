@@ -14,11 +14,11 @@ echo "Password:"
 read APPSTORE_PW
 
 chmod 744 *
-./brew.sh
-./cask.sh
-./git.sh
-./appstore.sh
-./conda.sh
-./osx.sh
-./bash.sh
-./atom.sh
+setup_scripts/brew.sh
+setup_scripts/cask.sh
+setup_scripts/git.sh
+setup_scripts/appstore.sh
+setup_scripts/conda.sh
+setup_scripts/osx.sh
+setup_scripts/bash.sh
+setup_scripts/atom.sh
