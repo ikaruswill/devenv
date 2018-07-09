@@ -1,0 +1,5 @@
+---
+- name: Restore bash_profile
+  copy:
+    src: bash_profile
+    dest: '/Users/{{ ansible_user }}/.bash_profile' # TODO: Source bash_profile

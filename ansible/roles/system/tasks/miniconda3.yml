@@ -1,0 +1,13 @@
+---
+- name: Download miniconda3 install script
+  get_url:
+    url: https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+    dest: '/tmp/'
+    mode: 0744
+
+- name: Install miniconda3 # TODO: Either resolve bash_profile conflicts or use final version
+  shell: /tmp/Miniconda3-latest-MacOSX-x86_64.sh && source ~/.bash_profile
+
+- name: Add conda channels
+  command: conda config --add channels {{ item }}
+  loop: '{{ system_conda_channels }}'

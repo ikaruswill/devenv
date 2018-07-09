@@ -1,0 +1,13 @@
+---
+- name: Copy package-list.txt
+  copy:
+    src: package-list.txt
+    dest: '/tmp/package-list.txt'
+
+- name: Install atom packages
+  command: apm install --packages-file /tmp/package-list.txt
+
+- name: Restore atom config
+  copy:
+    src: config.cson
+    dest: '/Users/{{ ansible_user }}/.atom/config.cson'
