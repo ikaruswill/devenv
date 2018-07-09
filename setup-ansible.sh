@@ -6,7 +6,7 @@ BOLD=`tput bold`
 REV=`tput smso`
 
 echo "${REV}                                                            ${NORM}"
-echo "${REV}                devenv-ansible setup script                 ${NORM}"
+echo "${REV}                ${BOLD}devenv${NORM}${REV}: Ansible setup script                ${NORM}"
 echo "${REV}                                                            ${NORM}"
 echo ""
 echo "Standby for password prompts..."
@@ -36,8 +36,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Get email and sign in to App Store
 echo "Login to Apple App Store"
-echo "Apple ID:"
-read EMAIL
+read -p "Apple ID: " EMAIL
 mas signin $EMAIL
 
 echo "End of interactive commands"
@@ -54,9 +53,10 @@ if test ! $(which python3); then
 fi
 
 # Setup and activate venv
-echo "Activating venv"
-python3 -m venv ./venv
-source ./venv/bin/activate
+VENV_DIR=./venv
+echo "Activating venv..."
+python3 -m venv $VENV_DIR
+source $VENV_DIR/bin/activate
 
 # Install ansible in venv
 if test ! $(which ansible); then
@@ -64,15 +64,22 @@ if test ! $(which ansible); then
     pip install ansible
 fi
 
+# Symlink role files/config to actual config folder
 ANSIBLE_CONFIGS_LINK=ansible/roles/system/files/configs
 CONFIGS_FOLDER=$(pwd)/configs
-
-# Symlink role files/config to actual config folder
+echo "Symlinking configs directory to ansible system role..."
 rm -rf $ANSIBLE_CONFIGS_LINK
 ln -s $CONFIGS_FOLDER $ANSIBLE_CONFIGS_LINK
 
 # Run ansible playbook
-ansible-playbook ansible/ikaruswill-env.yml
+ANSIBLE_DIR=ansible
+pushd $ANSIBLE_DIR;
+ansible-playbook ikaruswill_env.yml
+popd;
 
 # Remove temporal symlink
+echo "Removing configs symlink..."
 rm -rf $ANSIBLE_CONFIGS_LINK
+
+echo ""
+echo "${REV}                       ${BOLD}Setup complete${REV}                       ${NORM}"
