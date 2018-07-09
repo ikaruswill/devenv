@@ -1,4 +1,14 @@
-echo "devenv setup script"
+#!/usr/bin/env bash
+
+# Set fonts for help menu
+NORM=`tput sgr0`
+BOLD=`tput bold`
+REV=`tput smso`
+
+echo "${REV}                                                            ${NORM}"
+echo "${REV}                    devenv setup script                     ${NORM}"
+echo "${REV}                                                            ${NORM}"
+echo ""
 
 # Activate sudo and ask for password
 sudo -v

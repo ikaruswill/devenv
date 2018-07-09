@@ -1,6 +1,15 @@
-echo "devenv setup script"
+#!/usr/bin/env bash
 
-echo "Standby for password prompts"
+# Set fonts for help menu
+NORM=`tput sgr0`
+BOLD=`tput bold`
+REV=`tput smso`
+
+echo "${REV}                                                            ${NORM}"
+echo "${REV}                devenv-ansible setup script                 ${NORM}"
+echo "${REV}                                                            ${NORM}"
+echo ""
+echo "Standby for password prompts..."
 
 # Check if homebrew exists else install
 # ruby -e: single command mode
@@ -32,7 +41,8 @@ read EMAIL
 mas signin $EMAIL
 
 echo "End of interactive commands"
-read -n 1 -s -r -p "Press any key to proceed with non-interactive environment setup"
+read -n 1 -s -r -p "Press any key to proceed with non-interactive environment setup..."
+echo ""
 
 #### END OF INTERACTIVE COMMANDS ####
 
@@ -43,13 +53,11 @@ if test ! $(which python3); then
     brew install python3
 fi
 
-echo "Installing ansible in venv"
+echo "Activating venv"
 python3 -m venv ./venv
 source ./venv/bin/activate
 
 if test ! $(which ansible); then
-    echo "Installing ansible..."
+    echo "Installing ansible in venv..."
     pip install ansible
 fi
-
-chmod 744 *.sh
