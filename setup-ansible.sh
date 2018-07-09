@@ -72,7 +72,7 @@ rm -rf $ANSIBLE_CONFIGS_LINK
 ln -s $CONFIGS_FOLDER $ANSIBLE_CONFIGS_LINK
 
 # Run ansible playbook
-ansible-playbook ansible/ikaruswill-env.yml -i localhost,
+ansible-playbook ansible/ikaruswill-env.yml
 
 # Remove temporal symlink
 rm -rf $ANSIBLE_CONFIGS_LINK
