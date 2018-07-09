@@ -1,0 +1,6 @@
+---
+system_appstore_app_ids:
+  - 937984704
+  - 1176895641
+system_conda_channels:
+  - conda-forge

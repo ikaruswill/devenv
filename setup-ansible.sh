@@ -53,11 +53,3 @@ if test ! $(which ansible); then
 fi
 
 chmod 744 *.sh
-# ./brew.sh
-# ./cask.sh
-# ./git.sh
-# ./appstore.sh
-# ./conda.sh
-# ./osx.sh
-# ./bash.sh
-# ./atom.sh
