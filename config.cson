@@ -13,10 +13,6 @@
   "bracket-matcher": {}
   "city-lights-ui": {}
   core:
-    disabledPackages: [
-      "minimap-autohide"
-      "linter-pycodestyle"
-    ]
     ignoredNames: [
       ".git"
       ".hg"
@@ -49,8 +45,10 @@
     scrollToResultOnLiveSearch: true
   linter:
     disabledProviders: [
-      "Pylint"
+      "Flake8"
     ]
+  "linter-flake8":
+    executablePath: "$PROJECT/venv/bin/flake8"
   "linter-pycodestyle":
     executablePath: "venv/bin/pycodestyle"
   "linter-pylint":
@@ -77,8 +75,11 @@
       selection: true
       selectionDecorationsZIndex: 0
   "project-manager":
+    alwaysOpenInSameWindow: true
     includeGitRepositories: true
+    prettifyTitle: false
     savePathsRelativeToHome: true
+    showPath: false
     sortBy: "last modified"
   "python-isort":
     isortPath: "/usr/local/bin/isort"

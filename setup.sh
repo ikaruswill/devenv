@@ -6,14 +6,15 @@ sudo -v
 # Keep sudo alive
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Get email
+# Get App Store login details
 echo "Login to Apple AppStore"
 echo "AppleID:"
 read EMAIL
 echo "Password:"
 read APPSTORE_PW
 
-chmod 744 *
+# Execute scripts in order
+chmod 744 *.sh
 ./brew.sh
 ./cask.sh
 ./git.sh
