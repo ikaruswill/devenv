@@ -1,0 +1,44 @@
+---
+homebrew_formulas:
+  - bash
+  - git
+  - python
+  - node
+  # - python3 # Installed in setup
+homebrew_taps:
+  - caskroom/cask
+  - caskroom/fonts
+homebrew_casks:
+  # MacOS productivity tools
+  - alfred # License
+  - iterm2
+  - bartender # License
+  - fantastical # License
+  - spectacle
+  - the-unarchiver
+  - android-file-transfer
+  - transmission-remote-gui
+  # Developer tools
+  - sublime-text
+  - atom
+  - postman
+  - insomnia
+  - gitkraken
+  - java
+  # Database tools
+  - sequel-pro
+  - postico
+  # Virtualization tools
+  - virtualbox
+  - docker
+  # General productivity tools
+  - firefox
+  - google-chrome
+  - dropbox
+  - google-drive
+  - skype
+  # Media apps
+  - rambox
+  - vox
+  - vox-preferences-pane
+  - vlc

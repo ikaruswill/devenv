@@ -1,0 +1,23 @@
+---
+- name: Check if {{ homebrew_bash }} is already included in /etc/shells
+  shell: grep '^{{ homebrew_bash }}$' /etc/shells
+  register: homebrew_bash_exists
+  changed_when: false
+  failed_when: homebrew_bash_exists.rc not in [0, 1]
+
+- name: Add {{ homebrew_bash }} in /etc/shells
+  become: yes
+  lineinfile:
+    path: /etc/shells
+    line: '{{ homebrew_bash }}'
+  when: homebrew_bash_exists.rc == 1
+
+- name: Check current shell
+  shell: dscl . read ~ UserShell | awk '{print $2}'
+  register: homebrew_current_shell
+  changed_when: false
+
+- name: Change shell to {{ homebrew_bash }}
+  become: yes
+  shell: chsh -s {{ osx_login_shell_shell }} {{ ansible_user }}
+  when: homebrew_current_shell.stdout != "{{ homebrew_bash }}"
