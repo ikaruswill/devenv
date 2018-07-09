@@ -53,11 +53,26 @@ if test ! $(which python3); then
     brew install python3
 fi
 
+# Setup and activate venv
 echo "Activating venv"
 python3 -m venv ./venv
 source ./venv/bin/activate
 
+# Install ansible in venv
 if test ! $(which ansible); then
     echo "Installing ansible in venv..."
     pip install ansible
 fi
+
+ANSIBLE_CONFIGS_LINK=ansible/roles/system/files/configs
+CONFIGS_FOLDER=$(pwd)/configs
+
+# Symlink role files/config to actual config folder
+rm -rf $ANSIBLE_CONFIGS_LINK
+ln -s $CONFIGS_FOLDER $ANSIBLE_CONFIGS_LINK
+
+# Run ansible playbook
+ansible-playbook ansible/ikaruswill-env.yml -i localhost,
+
+# Remove temporal symlink
+rm -rf $ANSIBLE_CONFIGS_LINK
