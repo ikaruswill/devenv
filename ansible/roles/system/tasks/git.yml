@@ -1,7 +1,7 @@
 ---
 - name: Copy gitignore to user home
   copy:
-    src: gitignore_global
+    src: configs/gitignore_global
     dest: '/Users/{{ ansible_user }}/.gitignore_global'
 
 - name: Set global gitignore

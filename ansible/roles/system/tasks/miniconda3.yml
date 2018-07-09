@@ -5,8 +5,8 @@
     dest: '/tmp/'
     mode: 0744
 
-- name: Install miniconda3 # TODO: Either resolve bash_profile conflicts or use final version
-  shell: /tmp/Miniconda3-latest-MacOSX-x86_64.sh && source ~/.bash_profile
+- name: Install miniconda3
+  shell: /tmp/Miniconda3-latest-MacOSX-x86_64.sh
 
 - name: Add conda channels
   command: conda config --add channels {{ item }}

@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-apm install --packages-file files/package-list.txt
-cp files/config.cson ~/.atom/
+apm install --packages-file configs/package-list.txt
+cp configs/config.cson ~/.atom/
