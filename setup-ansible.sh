@@ -9,17 +9,17 @@ echo "Standby for password prompts"
 # curl -S: show errors
 # curl -L: follow redirects
 if test ! $(which brew); then
-  echo "Installing homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    echo "Installing homebrew..."
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 if test ! $(which mas); then
-  echo "Installing mas..."
-  brew install mas
+    echo "Installing mas..."
+    brew install mas
 fi
 
 # Activate sudo and ask for password
-echo "Prompting for sudo password, will keep sudo alive..."
+echo "Prompting for sudo password, will keep sudo alive"
 sudo -v
 
 # Keep sudo alive
@@ -39,14 +39,18 @@ read -n 1 -s -r -p "Press any key to proceed with non-interactive environment se
 
 # Install python3 for ansible
 if test ! $(which python3); then
-  echo "Installing python3..."
-  brew install python3
+    echo "Installing python3..."
+    brew install python3
 fi
 
 echo "Installing ansible in venv"
 python3 -m venv ./venv
 source ./venv/bin/activate
-pip install ansible
+
+if test ! $(which ansible); then
+    echo "Installing ansible..."
+    pip install ansible
+fi
 
 chmod 744 *.sh
 # ./brew.sh
