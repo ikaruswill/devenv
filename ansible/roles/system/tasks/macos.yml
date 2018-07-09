@@ -1,4 +1,4 @@
---- 
+---
 - name: Install XCode command line tools
   command: xcode-select --install
 
@@ -6,6 +6,8 @@
   homebrew:
     name: dark-mode
     update_homebrew: yes
+  notify:
+    - run homebrew cleanup
 
 - name: Activate macOS dark mode
   command: dark-mode on
@@ -16,16 +18,20 @@
     state: absent
 
 - name: Disable automatic rearrangement of spaces based on most recent use
-  command: defaults write com.apple.dock mru-spaces -bool false && killall Dock
+  command: defaults write com.apple.dock mru-spaces -bool false
+  notify:
+    - restart dock
 
 - name: Remove GarageBand and data
-  command: '{{ item }}'
+  file:
+    path: '{{ item }}'
+    state: absent
   loop:
-    - rm -rf /Applications/GarageBand.app
-    - rm -rf /Library/Application\ Support/GarageBand
-    - rm -rf /Library/Application\ Support/Logic/
-    - rm -rf /Library/Audio/Apple\ Loops
-    - rm -rf /Library/Audio/Apple\ Loops\ Index
+    - '/Applications/GarageBand.app'
+    - '/Library/Application Support/GarageBand'
+    - '/Library/Application Support/Logic/'
+    - '/Library/Audio/Apple Loops'
+    - '/Library/Audio/Apple Loops Index'
 
 - name: Disable Android File Transfer auto-launch on connect
   script: disable_aft.sh
