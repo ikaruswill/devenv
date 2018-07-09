@@ -1,6 +1,6 @@
 echo "Export atom environment"
 
-pushd ../configs > /dev/null
+pushd configs > /dev/null
 
 echo "Exporting atom packages..."
 apm list --installed --bare > package-list.txt
