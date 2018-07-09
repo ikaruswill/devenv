@@ -1,0 +1,11 @@
+---
+- name: Copy gitignore to {{ ansible_user }} home folder
+  copy:
+    src: configs/gitignore_global
+    dest: '/Users/{{ ansible_user }}/.gitignore_global'
+
+- name: Set global gitignore
+  git_config:
+    name: core.excludesfile
+    scope: global
+    value: '/Users/{{ ansible_user }}.gitignore_global'

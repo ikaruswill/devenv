@@ -1,0 +1,18 @@
+---
+- name: Run git tasks
+  include_tasks: git.yml
+
+- name: Run Apple App Store tasks
+  include_tasks: appstore.yml
+
+- name: Run miniconda3 tasks
+  include_tasks: miniconda3.yml
+
+- name: Run macOS general tasks
+  include_tasks: macos.yml
+
+- name: Run bash tasks
+  include_tasks: bash.yml
+
+- name: Run Atom text editor tasks
+  include_tasks: atom.yml

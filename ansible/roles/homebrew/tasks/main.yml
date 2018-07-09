@@ -1,0 +1,25 @@
+---
+- name: Install homebrew formulas
+  homebrew:
+    name: '{{ homebrew_formulas }}'
+    update_homebrew: yes
+  notify:
+    - run homebrew cleanup
+
+- name: Check and set shell
+  include_tasks: tasks/check_shell.yml
+
+- name: Configure homebrew taps
+  homebrew_tap:
+    name: '{{ item }}'
+  loop: '{{ homebrew_taps }}'
+  notify:
+    - run homebrew cleanup
+
+- name: Install homebrew casks
+  homebrew_cask:
+    name: '{{ item }}'
+    update_homebrew: yes
+  loop: '{{ homebrew_casks }}'
+  notify:
+    - run homebrew cleanup

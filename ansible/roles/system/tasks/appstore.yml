@@ -1,0 +1,4 @@
+---
+- name: Install App Store apps
+  command: 'mas install {{ item }}'
+  loop: '{{ system_appstore_app_ids }}'

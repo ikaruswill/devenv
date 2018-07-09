@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-cp bash_profile ~/.bash_profile
+cp configs/bash_profile ~/.bash_profile
 source ~/.bash_profile
