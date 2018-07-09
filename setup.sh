@@ -6,7 +6,7 @@ BOLD=`tput bold`
 REV=`tput smso`
 
 echo "${REV}                                                            ${NORM}"
-echo "${REV}                    devenv setup script                     ${NORM}"
+echo "${REV}                    devenv: Setup script                    ${NORM}"
 echo "${REV}                                                            ${NORM}"
 echo ""
 
@@ -18,16 +18,19 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Get email and sign in to App Store
 echo "Login to Apple App Store"
-echo "Apple ID:"
-read EMAIL
+read -p "Apple ID: " EMAIL
 mas signin $EMAIL
 
 # Execute scripts in order
-chmod 744 *.sh
-setup_scripts/cask.sh
-setup_scripts/git.sh
-setup_scripts/appstore.sh
-setup_scripts/conda.sh
-setup_scripts/osx.sh
-setup_scripts/bash.sh
-setup_scripts/atom.sh
+SCRIPTS_DIR=setup_scripts
+chmod 744 $SCRIPTS_DIR/*.sh
+$SCRIPTS_DIR/cask.sh
+$SCRIPTS_DIR/git.sh
+$SCRIPTS_DIR/appstore.sh
+$SCRIPTS_DIR/conda.sh
+$SCRIPTS_DIR/osx.sh
+$SCRIPTS_DIR/bash.sh
+$SCRIPTS_DIR/atom.sh
+
+echo ""
+echo "${REV}                       ${BOLD}Setup complete${REV}                       ${NORM}"
