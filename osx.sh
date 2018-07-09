@@ -1,6 +1,3 @@
-# Update OS X
-sudo softwareupdate -iva
-
 # Install Xcode command line tools
 xcode-select --install
 
