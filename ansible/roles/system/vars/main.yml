@@ -1,6 +1,7 @@
 ---
 system_appstore_app_ids:
-  - 937984704
-  - 1176895641
+  - 937984704 # Amphetamine
+  - 1176895641 # Spark
+  - 1003160018 # Quip
 system_conda_channels:
   - conda-forge
