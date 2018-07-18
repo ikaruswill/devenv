@@ -17,6 +17,7 @@ homebrew_casks:
   - spectacle
   - the-unarchiver
   - android-file-transfer
+  - transmission-remote-gui
   - electorrent
   # Developer tools
   - sublime-text
