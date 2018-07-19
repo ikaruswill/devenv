@@ -45,7 +45,6 @@ echo ""
 
 #### END OF INTERACTIVE COMMANDS ####
 
-
 # Install python3 for ansible
 if test ! $(which python3); then
     echo "Installing python3..."
@@ -53,15 +52,16 @@ if test ! $(which python3); then
 fi
 
 # Setup and activate venv
-VENV_DIR=./venv
+ANSIBLE_DIR=ansible
+VENV_DIR=$ANSIBLE_DIR/venv
 echo "Activating venv..."
 python3 -m venv $VENV_DIR
 source $VENV_DIR/bin/activate
 
 # Install ansible in venv
 if test ! $(which ansible); then
-    echo "Installing ansible in venv..."
-    pip install ansible
+    echo "Installing ansible and dependencies in venv..."
+    pip install -r $ANSIBLE_DIR/requirements.txt
 fi
 
 # Symlink role files/config to actual config folder
@@ -72,7 +72,6 @@ rm -rf $ANSIBLE_CONFIGS_LINK
 ln -s $CONFIGS_FOLDER $ANSIBLE_CONFIGS_LINK
 
 # Run ansible playbook
-ANSIBLE_DIR=ansible
 pushd $ANSIBLE_DIR;
 ansible-playbook ikaruswill_env.yml
 popd;
@@ -80,6 +79,11 @@ popd;
 # Remove temporal symlink
 echo "Removing configs symlink..."
 rm -rf $ANSIBLE_CONFIGS_LINK
+
+# Remove venv
+echo "Deactivating and removing venv"
+deactivate
+rm -rf $VENV_DIR
 
 echo ""
 echo "${REV}                       ${BOLD}Setup complete${REV}                       ${NORM}"
