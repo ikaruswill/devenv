@@ -6,7 +6,7 @@
     app: "iTerm.app"
     surpressDirectoryArgument: false
   "autocomplete-python":
-    extraPaths: "$PROJECT/venv/python2.7/site-packages;$PROJECT/venv/python3.6/site-packages"
+    extraPaths: "$PROJECT/venv/lib/python2.7/site-packages;$PROJECT/venv/lib/python3.6/site-packages"
     pythonPaths: "$PROJECT/venv/bin/python"
     useKite: false
     useSnippets: "required"
@@ -48,7 +48,7 @@
       "Flake8"
     ]
   "linter-flake8":
-    executablePath: "$PROJECT/venv/bin/flake8"
+    executablePath: "/usr/local/bin/flake8;$PROJECT/venv/bin/flake8"
   "linter-pycodestyle":
     executablePath: "venv/bin/pycodestyle"
   "linter-pylint":
@@ -57,6 +57,8 @@
   "linter-ui-default":
     panelHeight: 56
     statusBarRepresents: "Current File"
+  "markdown-preview":
+    useGitHubStyle: true
   minimap:
     disablePythonDocLinks: true
     plugins:
@@ -83,6 +85,7 @@
     sortBy: "last modified"
   "python-isort":
     isortPath: "/usr/local/bin/isort"
+    sortOnSave: true
   "seti-ui":
     compactView: true
     hideProjectTab: true
