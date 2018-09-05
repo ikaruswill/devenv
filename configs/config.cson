@@ -6,8 +6,6 @@
     app: "iTerm.app"
     surpressDirectoryArgument: false
   "autocomplete-python":
-    extraPaths: "$PROJECT/venv/lib/python2.7/site-packages;$PROJECT/venv/lib/python3.6/site-packages"
-    pythonPaths: "$PROJECT/venv/bin/python"
     useKite: false
     useSnippets: "required"
   "bracket-matcher": {}
