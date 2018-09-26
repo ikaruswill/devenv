@@ -1,4 +1,12 @@
 ---
+- name: Get MacOS version
+  command: sw_vers -productVersion
+  register: sw_vers
+
+- name: Set system_macos_version variable
+  set_fact:
+    system_macos_version: '{{ sw_vers.stdout }}'
+
 - name: Install XCode command line tools
   command: xcode-select --install
 
@@ -9,7 +17,7 @@
   notify:
     - run homebrew cleanup
 
-- name: Activate macOS dark mode
+- name: Activate MacOS dark mode
   command: dark-mode on
 
 - name: Remove dark-mode
@@ -21,6 +29,13 @@
   command: defaults write com.apple.dock mru-spaces -bool false
   notify:
     - restart dock
+
+# MacOS Mojave changes
+- name: Re-enable font-smoothing (disabled on MacOS Mojave)
+  command: defaults write -g CGFontRenderingFontSmoothingDisabled -bool false
+  when: system_macos_version is version('10.14', '>=')
+
+# TODO: Disable Mojave recent apps in dock
 
 - name: Remove GarageBand and data
   file:
