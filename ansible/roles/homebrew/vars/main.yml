@@ -26,6 +26,7 @@ homebrew_casks:
   - insomnia
   - gitkraken
   - java
+  - secure-pipes
   # Database tools
   - sequel-pro
   - postico
