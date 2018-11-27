@@ -40,6 +40,7 @@ homebrew_casks:
   - skype
   # Media apps
   - rambox
+  - spotify
   - vox
   - vox-preferences-pane
   - vlc
