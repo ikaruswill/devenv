@@ -24,6 +24,7 @@ homebrew_casks:
   - atom
   - postman
   - insomnia
+  - secure-pipes
   - gitkraken
   - java
   - secure-pipes
