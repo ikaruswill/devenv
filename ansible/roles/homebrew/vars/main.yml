@@ -32,8 +32,8 @@ homebrew_casks:
   - sequel-pro
   - postico
   # Virtualization tools
-  - virtualbox
   - docker
+  - dbeaver-community
   # General productivity tools
   - firefox
   - google-chrome
