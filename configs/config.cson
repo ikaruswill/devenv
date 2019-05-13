@@ -42,6 +42,7 @@
   editor:
     fontFamily: "Inconsolata"
     scrollSensitivity: 60
+    showIndentGuide: true
     tabLength: 4
   "exception-reporting":
     userId: "ff279c35-0461-40b8-dbbb-67ed8b54de5d"
