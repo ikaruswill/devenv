@@ -1,4 +1,12 @@
 ---
+- name: Symlink miniconda3
+  file:
+    src: /usr/local/miniconda3
+    dest: /Users/{{ ansible_user }}/miniconda3
+    owner: '{{ ansible_user }}'
+    group: staff
+    state: link
+
 - name: Add conda channels
   command: conda config --add channels {{ item }}
   loop: '{{ homebrew_conda_channels }}'
