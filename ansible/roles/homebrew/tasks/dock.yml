@@ -5,22 +5,7 @@
     update_homebrew: yes
 
 - name: Remove unwanted dock items
-  command: dockutil --remove '{{ item }}'
-  loop:
-    - 'Siri'
-    - 'Launchpad'
-    - 'Mail'
-    - 'Contacts'
-    - 'Calendar'
-    - 'Notes'
-    - 'Reminders'
-    - 'Maps'
-    - 'Photos'
-    - 'Messages'
-    - 'Facetime'
-    - 'iTunes'
-    - 'App Store'
-    - 'System Preferences'
+  command: dockutil --remove all
 
 - name: Add dock apps
   command: dockutil --find '{{ item.name }}' || dockutil --add '{{ item.path }} --position {{ index_var + 1 }}'
