@@ -18,6 +18,9 @@
 - name: Disable swipe scroll direction
   command: defaults write -g com.apple.swipescrolldirection -bool false
 
+- name: Disable spotlight hotkey
+  command: /usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.symbolichotkeys.plist -c "Set AppleSymbolicHotKeys:64:enabled false"
+
 # MacOS Mojave changes
 - name: Re-enable font-smoothing (disabled on MacOS Mojave)
   command: defaults write -g CGFontRenderingFontSmoothingDisabled -bool false
