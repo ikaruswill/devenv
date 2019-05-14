@@ -57,3 +57,26 @@ appstore_app_ids:
   - 1176895641 # Spark
   - 1003160018 # Quip
   - 441258766 # Magnet
+dock_apps:
+  - name: Fantastical 2
+    path: /Applications/Fantastical 2.app
+  - name: Spark
+    path: /Applications/Spark.app
+  - name: Boostnote
+    path: /Applications/Boostnote.app
+  - name: Safari
+    path: /Applications/Safari.app
+  - name: iTerm
+    path: /Applications/iTerm.app
+  - name: Atom
+    path: /Applications/Atom.app
+  - name: Fork
+    path: /Applications/Fork.app
+  - name: Rambox
+    path: /Applications/Rambox.app
+dock_folders:
+  - name: Downloads
+    path: ~/Downloads
+    view: fan
+    display: stack
+    sort: dateadded

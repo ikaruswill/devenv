@@ -11,34 +11,13 @@
   shell: >
     dockutil --find '{{ item.name }}' ||
     dockutil --add '{{ item.path }}'
-  loop:
-    - name: Fantastical 2
-      path: /Applications/Fantastical 2.app
-    - name: Spark
-      path: /Applications/Spark.app
-    - name: Boostnote
-      path: /Applications/Boostnote.app
-    - name: Safari
-      path: /Applications/Safari.app
-    - name: iTerm
-      path: /Applications/iTerm.app
-    - name: Atom
-      path: /Applications/Atom.app
-    - name: Fork
-      path: /Applications/Fork.app
-    - name: Rambox
-      path: /Applications/Rambox.app
+  loop: '{{ dock_apps }}'
 
 - name: Add dock folders
   shell: >
     dockutil --find '{{ item.name }}' ||
     dockutil --add '{{ item.path }}' --view {{ item.view }} --display {{ item.display }} --sort {{ item.sort }}
-  loop:
-    - name: Downloads
-      path: ~/Downloads
-      view: fan
-      display: stack
-      sort: dateadded
+  loop: '{{ dock_folders }}'
 
 - name: Set dock size
   command: defaults write com.apple.dock tilesize -int 40
