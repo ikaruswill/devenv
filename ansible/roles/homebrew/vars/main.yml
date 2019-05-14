@@ -20,6 +20,7 @@ homebrew_casks:
   - transmission-remote-gui
   - electorrent
   # Developer tools
+  - miniconda
   - sublime-text
   - atom
   - postman
@@ -47,3 +48,5 @@ homebrew_casks:
   - vox
   - vox-preferences-pane
   - vlc
+homebrew_conda_channels:
+  - conda-forge

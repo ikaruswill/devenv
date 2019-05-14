@@ -1,0 +1,4 @@
+---
+- name: Add conda channels
+  command: conda config --add channels {{ item }}
+  loop: '{{ homebrew_conda_channels }}'

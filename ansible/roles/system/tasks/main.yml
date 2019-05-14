@@ -1,12 +1,7 @@
 ---
-- name: Run Apple App Store tasks
-  include_tasks: appstore.yml
 
 - name: Run git tasks
   include_tasks: git.yml
-
-- name: Run miniconda3 tasks
-  include_tasks: miniconda3.yml
 
 - name: Run macOS general tasks
   include_tasks: macos.yml
