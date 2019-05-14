@@ -6,7 +6,7 @@
     mode: 0744
 
 - name: Install miniconda3
-  shell: /tmp/Miniconda3-latest-MacOSX-x86_64.sh
+  shell: /tmp/Miniconda3-latest-MacOSX-x86_64.sh -b -p $HOME/miniconda
 
 - name: Add conda channels
   command: conda config --add channels {{ item }}
