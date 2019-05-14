@@ -8,4 +8,4 @@
   git_config:
     name: core.excludesfile
     scope: global
-    value: '/Users/{{ ansible_user }}.gitignore_global'
+    value: '/Users/{{ ansible_user }}/.gitignore_global'
