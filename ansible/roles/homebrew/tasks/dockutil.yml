@@ -21,5 +21,32 @@
     - 'iTunes'
     - 'App Store'
     - 'System Preferences'
-  notify:
-    - restart dock
+
+- name: Add dock apps
+  command: dockutil --find '{{ item.name }}' || dockutil --add '{{ item.path }} --position {{ index_var + 1 }}'
+  loop:
+    - name: Fantastical 2
+      path: /Applications/Fantastical 2.app
+    - name: Spark
+      path: /Applications/Spark.app
+    - name: Boostnote
+      path: /Applications/Boostnote.app
+    - name: Safari
+      path: /Applications/Safari.app
+    - name: iTerm
+      path: /Applications/iTerm.app
+    - name: Atom
+      path: /Applications/Atom.app
+    - name: Fork
+      path: /Applications/Fork.app
+    - name: Rambox
+      path: /Applications/Rambox.app
+
+- name: Add dock folders
+  command: dockutil --find '{{ item.name }}' || dockutil --add '{{ item.path }}' --view '{{ item.view }}' --display '{{ item.display }}' --sort '{{ item.sort }}'
+  loop:
+    - name: Downloads
+      path: ~/Downloads
+      view: fan
+      display: stack
+      sort: dateadded
