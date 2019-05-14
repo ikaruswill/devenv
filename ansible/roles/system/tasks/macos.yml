@@ -10,21 +10,6 @@
 - name: Install XCode command line tools
   command: xcode-select --install
 
-- name: Install dark-mode
-  homebrew:
-    name: dark-mode
-    update_homebrew: yes
-  notify:
-    - run homebrew cleanup
-
-- name: Activate MacOS dark mode
-  command: dark-mode on
-
-- name: Remove dark-mode
-  homebrew:
-    name: dark-mode
-    state: absent
-
 - name: Disable automatic rearrangement of spaces based on most recent use
   command: defaults write com.apple.dock mru-spaces -bool false
   notify:
