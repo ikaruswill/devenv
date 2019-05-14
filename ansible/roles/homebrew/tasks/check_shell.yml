@@ -19,5 +19,5 @@
 
 - name: Change shell to {{ homebrew_bash }}
   become: yes
-  shell: chsh -s {{ osx_login_shell_shell }} {{ ansible_user }}
+  shell: chsh -s {{ homebrew_bash }} {{ ansible_user }}
   when: homebrew_current_shell.stdout != "{{ homebrew_bash }}"
