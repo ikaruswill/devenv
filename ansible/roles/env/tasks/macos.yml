@@ -9,6 +9,7 @@
 
 - name: Install XCode command line tools
   command: xcode-select --install
+  ignore_errors: yes
 
 - name: Disable automatic rearrangement of spaces based on most recent use
   command: defaults write com.apple.dock mru-spaces -bool false
@@ -38,6 +39,15 @@
     - '/Library/Application Support/Logic/'
     - '/Library/Audio/Apple Loops'
     - '/Library/Audio/Apple Loops Index'
+
+- name: Open Android File Transfer to generate Agent
+  command: open '/Applications/Android File Transfer.app'
+
+- pause:
+    prompt: "Make sure Android File Transfer is initialized"
+
+- name: Kill Android File Transfer
+  command: killall 'Android File Transfer'
 
 - name: Disable Android File Transfer auto-launch on connect
   script: disable_aft.sh
