@@ -1,5 +1,5 @@
 ---
 - hosts: localhost
-
+  connection: local
   roles:
     - roles/env
