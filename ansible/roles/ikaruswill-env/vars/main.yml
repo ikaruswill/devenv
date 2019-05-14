@@ -50,9 +50,9 @@ homebrew_casks:
   - vlc
   # Fonts
   - font-inconsolata
-homebrew_conda_channels:
+conda_channels:
   - conda-forge
-system_appstore_app_ids:
+appstore_app_ids:
   - 937984704 # Amphetamine
   - 1176895641 # Spark
   - 1003160018 # Quip

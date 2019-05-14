@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 # Set fonts for help menu
 NORM=`tput sgr0`
@@ -57,7 +58,7 @@ if test ! $(which ansible); then
 fi
 
 # Symlink role files/config to actual config folder
-ANSIBLE_CONFIGS_LINK=ansible/roles/env/files/configs
+ANSIBLE_CONFIGS_LINK=ansible/roles/ikaruswill-env/files/configs
 CONFIGS_FOLDER=$(pwd)/configs
 echo "Symlinking configs directory to ansible system role..."
 rm -rf $ANSIBLE_CONFIGS_LINK

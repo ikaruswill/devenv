@@ -27,8 +27,6 @@
   command: defaults write -g CGFontRenderingFontSmoothingDisabled -bool false
   when: system_macos_version is version('10.14', '>=')
 
-# TODO: Disable Mojave recent apps in dock
-
 - name: Remove GarageBand and data
   file:
     path: '{{ item }}'
