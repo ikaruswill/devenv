@@ -3,3 +3,5 @@ homebrew_bash: /usr/local/bin/bash
 homebrew_formulas: []
 homebrew_taps: []
 homebrew_casks: []
+system_appstore_app_ids: []
+system_conda_channels: []
