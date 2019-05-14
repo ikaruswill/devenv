@@ -73,7 +73,7 @@ ln -s $CONFIGS_FOLDER $ANSIBLE_CONFIGS_LINK
 
 # Run ansible playbook
 pushd $ANSIBLE_DIR;
-ansible-playbook ikaruswill_env.yml
+ansible-playbook ikaruswill-env.yml --ask-become-pass
 popd;
 
 # Remove temporal symlink
