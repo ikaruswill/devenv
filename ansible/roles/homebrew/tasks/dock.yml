@@ -44,3 +44,8 @@
   command: defaults write com.apple.dock tilesize -int 40
   notify:
     - restart dock
+
+- name: Disable dock recent apps
+  command: defaults write ~/Library/Preferences/com.apple.dock show-recents -bool false
+  notify:
+    - restart dock
