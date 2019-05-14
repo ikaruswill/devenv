@@ -2,5 +2,5 @@
 - hosts: localhost
 
   roles:
-    - roles/homebrew
     - roles/system
+    - roles/homebrew

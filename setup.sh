@@ -34,10 +34,6 @@ sudo -v
 # Keep sudo alive
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-echo "End of interactive commands"
-read -n 1 -s -r -p "Press any key to proceed with non-interactive environment setup..."
-echo ""
-
 #### END OF INTERACTIVE COMMANDS ####
 
 # Install python3 for ansible
