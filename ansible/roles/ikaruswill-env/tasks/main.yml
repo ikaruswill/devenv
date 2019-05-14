@@ -26,12 +26,12 @@
 #
 # - name: Install App Store apps
 #   include_tasks: appstore.yml
-
-- name: Configure git
-  include_tasks: git.yml
-
-- name: Configure macOS
-  include_tasks: macos.yml
+#
+# - name: Configure git
+#   include_tasks: git.yml
+# 
+# - name: Configure macOS
+#   include_tasks: macos.yml
 
 - name: Configure bash
   include_tasks: bash.yml

@@ -8,5 +8,5 @@
     state: link
 
 - name: Add conda channels
-  command: conda config --add channels {{ item }}
+  shell: /Users/{{ ansible_user }}/miniconda3/bin/conda config --add channels {{ item }}
   loop: '{{ homebrew_conda_channels }}'
