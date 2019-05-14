@@ -57,7 +57,7 @@ if test ! $(which ansible); then
 fi
 
 # Symlink role files/config to actual config folder
-ANSIBLE_CONFIGS_LINK=ansible/roles/system/files/configs
+ANSIBLE_CONFIGS_LINK=ansible/roles/env/files/configs
 CONFIGS_FOLDER=$(pwd)/configs
 echo "Symlinking configs directory to ansible system role..."
 rm -rf $ANSIBLE_CONFIGS_LINK
