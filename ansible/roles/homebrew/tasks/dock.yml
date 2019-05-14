@@ -39,3 +39,8 @@
       view: fan
       display: stack
       sort: dateadded
+
+- name: Set dock size
+  command: defaults write com.apple.dock tilesize -int 40
+  notify:
+    - restart dock
