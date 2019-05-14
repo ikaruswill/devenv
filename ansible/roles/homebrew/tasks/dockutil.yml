@@ -1,0 +1,25 @@
+---
+- name: Install dockutil
+  homebrew:
+    name: dockutil
+    update_homebrew: yes
+
+- name: Remove unwanted dock items
+  command: dockutil --remove '{{ item }}'
+  loop:
+    - 'Siri'
+    - 'Launchpad'
+    - 'Mail'
+    - 'Contacts'
+    - 'Calendar'
+    - 'Notes'
+    - 'Reminders'
+    - 'Maps'
+    - 'Photos'
+    - 'Messages'
+    - 'Facetime'
+    - 'iTunes'
+    - 'App Store'
+    - 'System Preferences'
+  notify:
+    - restart dock

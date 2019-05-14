@@ -23,3 +23,6 @@
   loop: '{{ homebrew_casks }}'
   notify:
     - run homebrew cleanup
+
+- name: Configure dock
+  include_tasks: tasks/dockutil.yml
