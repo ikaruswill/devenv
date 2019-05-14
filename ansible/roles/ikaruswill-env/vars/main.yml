@@ -48,6 +48,8 @@ homebrew_casks:
   - vox
   - vox-preferences-pane
   - vlc
+  # Fonts
+  - font-inconsolata
 homebrew_conda_channels:
   - conda-forge
 system_appstore_app_ids:
