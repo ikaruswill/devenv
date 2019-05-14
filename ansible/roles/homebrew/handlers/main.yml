@@ -1,3 +1,6 @@
 ---
 - name: run homebrew cleanup
   command: brew cleanup
+
+- name: restart dock
+  command: killall Dock
