@@ -61,6 +61,7 @@ source $VENV_DIR/bin/activate
 # Install ansible in venv
 if test ! $(which ansible); then
     echo "Installing ansible and dependencies in venv..."
+    pip install --upgrade pip
     pip install -r $ANSIBLE_DIR/requirements.txt
 fi
 
