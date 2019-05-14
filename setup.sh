@@ -34,11 +34,6 @@ sudo -v
 # Keep sudo alive
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Get email and sign in to App Store
-echo "Login to Apple App Store"
-read -p "Apple ID: " EMAIL
-mas signin $EMAIL
-
 echo "End of interactive commands"
 read -n 1 -s -r -p "Press any key to proceed with non-interactive environment setup..."
 echo ""
