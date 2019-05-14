@@ -1,2 +1,1 @@
 ansible>=2.6.14
-mitogen>=0.2.6
