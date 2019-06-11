@@ -14,7 +14,6 @@ homebrew_casks:
   - iterm2
   - bartender # License
   - fantastical # License
-  - spectacle
   - the-unarchiver
   - android-file-transfer
   - transmission-remote-gui
