@@ -1,23 +1,23 @@
 ---
-- name: Check if {{ homebrew_bash }} is already included in /etc/shells
-  shell: grep '^{{ homebrew_bash }}$' /etc/shells
-  register: homebrew_bash_exists
+- name: Check if {{ shell_path }} is already included in /etc/shells
+  shell: grep '^{{ shell_path }}$' /etc/shells
+  register: shell_path_exists
   changed_when: false
-  failed_when: homebrew_bash_exists.rc not in [0, 1]
+  failed_when: shell_path_exists.rc not in [0, 1]
 
-- name: Add {{ homebrew_bash }} in /etc/shells
+- name: Add {{ shell_path }} in /etc/shells
   become: yes
   lineinfile:
     path: /etc/shells
-    line: '{{ homebrew_bash }}'
-  when: homebrew_bash_exists.rc == 1
+    line: '{{ shell_path }}'
+  when: shell_path_exists.rc == 1
 
 - name: Check current shell
   shell: dscl . read ~ UserShell | awk '{print $2}'
   register: homebrew_current_shell
   changed_when: false
 
-- name: Change shell to {{ homebrew_bash }}
+- name: Change shell to {{ shell_path }}
   become: yes
-  shell: chsh -s {{ homebrew_bash }} {{ ansible_user }}
-  when: homebrew_current_shell.stdout != "{{ homebrew_bash }}"
+  shell: chsh -s {{ shell_path }} {{ ansible_user }}
+  when: homebrew_current_shell.stdout != "{{ shell_path }}"
