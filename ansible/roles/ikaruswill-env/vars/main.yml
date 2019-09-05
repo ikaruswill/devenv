@@ -22,7 +22,6 @@ homebrew_casks:
   - miniconda
   - sublime-text
   - atom
-  - postman
   - insomnia
   - secure-pipes
   - gitkraken
@@ -40,7 +39,6 @@ homebrew_casks:
   - dropbox
   - google-drive
   - skype
-  - boostnote
   # Media apps
   - rambox
   - spotify
