@@ -1,0 +1,12 @@
+---
+- name: Download and install oh-my-zsh
+  become: yes
+  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
+
+- name: Install 'common' theme
+  shell: wget -O $ZSH_CUSTOM/themes/common.zsh-theme https://raw.githubusercontent.com/jackharrisonsherlock/common/master/common.zsh-theme
+
+- name: Restore zshrc
+  copy:
+    src: configs/zshrc
+    dest: '/Users/{{ ansible_user }}/.zshrc'
