@@ -67,8 +67,8 @@ dock_apps:
     path: /Applications/iTerm.app
   - name: Atom
     path: /Applications/Atom.app
-  - name: Fork
-    path: /Applications/Fork.app
+  - name: GitKraken
+    path: /Applications/GitKraken.app
   - name: Rambox
     path: /Applications/Rambox.app
 dock_folders:
