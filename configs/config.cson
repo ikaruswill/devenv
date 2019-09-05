@@ -1,4 +1,7 @@
 "*":
+  Hydrogen:
+    gateways: "[{ \"name\": \"Baymax\", \"options\": {\"baseUrl\": \"https://baymax.grabpay.com/jhub/user/will.ho\"}}]"
+    globalMode: true
   "advanced-open-file":
     createFileInstantly: true
   "atom-clock": {}
@@ -13,6 +16,7 @@
   "bracket-matcher": {}
   "city-lights-ui": {}
   core:
+    automaticallyUpdate: false
     disabledPackages: [
       "minimap-autohide"
       "linter-pycodestyle"
@@ -36,7 +40,7 @@
     telemetryConsent: "limited"
     themes: [
       "seti-ui"
-      "flatland-dark"
+      "twilight-syntax"
     ]
     titleBar: "custom"
   editor:
@@ -48,8 +52,12 @@
     userId: "ff279c35-0461-40b8-dbbb-67ed8b54de5d"
   "find-and-replace":
     scrollToResultOnLiveSearch: true
+  "fuzzy-finder":
+    scoringSystem: "fast"
+    useRipGrep: true
   linter:
     disabledProviders: [
+      "Flake8"
       "Pylint"
     ]
   "linter-pycodestyle":
@@ -83,6 +91,7 @@
     sortBy: "last modified"
   "python-isort":
     isortPath: "/usr/local/bin/isort"
+    sortOnSave: true
   "seti-ui":
     compactView: true
     hideProjectTab: true
