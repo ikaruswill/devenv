@@ -42,11 +42,16 @@ homebrew_casks:
   # Media apps
   - rambox
   - spotify
+  - calibre
   - vox
   - vox-preferences-pane
   - vlc
   # Fonts
   - font-inconsolata
+  # Self-hosted
+  - bitwarden
+  - nextcloud
+  - joplin
 conda_channels:
   - conda-forge
 appstore_app_ids:
