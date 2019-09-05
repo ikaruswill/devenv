@@ -4,6 +4,8 @@ homebrew_formulas:
   - git
   - python
   - node
+  - wget
+  - zsh
   # - python3 # Installed in setup
 homebrew_taps:
   - homebrew/cask
