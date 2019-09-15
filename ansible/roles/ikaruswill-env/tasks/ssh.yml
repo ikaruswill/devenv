@@ -1,0 +1,10 @@
+---
+- name: Ensure SSH directory exists
+  file:
+    path: /Users/{{ ansible_user }}/.ssh
+    state: directory
+    
+- name: Restore SSH config
+  copy:
+    src: configs/ssh_config
+    dest: '/Users/{{ ansible_user }}/.ssh/config'

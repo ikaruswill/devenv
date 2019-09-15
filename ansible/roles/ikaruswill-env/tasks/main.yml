@@ -36,6 +36,12 @@
 - name: Configure bash
   include_tasks: bash.yml
 
+- name: Configure zsh
+  include_tasks: zsh.yml
+
+- name: Configure ssh
+  include_tasks: ssh.yml
+
 - name: Configure miniconda
   include_tasks: miniconda.yml
 
