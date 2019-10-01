@@ -148,3 +148,10 @@ function rmenv {
 # Fix invalid terminal locale issue
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# Mozilla SOPS
+export SOPS_PGP_FP="31FF21073278DE485F5654781BEE68ADA7161534"
+
+# gpg-agent https://www.gnupg.org/documentation/manuals/gnupg/Invoking-GPG_002dAGENT.html
+GPG_TTY=$(tty)
+export GPG_TTY

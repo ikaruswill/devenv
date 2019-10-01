@@ -56,3 +56,10 @@ export PGDATA=/usr/local/var/postgres/
 
 # Reclaim ctrl-s hotkey for i-search
 stty -ixon
+
+# Mozilla SOPS
+export SOPS_PGP_FP="31FF21073278DE485F5654781BEE68ADA7161534"
+
+# gpg-agent https://www.gnupg.org/documentation/manuals/gnupg/Invoking-GPG_002dAGENT.html
+GPG_TTY=$(tty)
+export GPG_TTY
