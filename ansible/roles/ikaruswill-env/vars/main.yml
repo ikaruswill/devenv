@@ -2,7 +2,9 @@
 homebrew_formulas:
   - bash
   - git
+  - gnupg
   - python
+  - sops
   - node
   - wget
   - zsh
