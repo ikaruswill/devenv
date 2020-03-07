@@ -3,9 +3,10 @@ homebrew_formulas:
   - bash
   - git
   - gnupg
+  - kubernetes-cli
+  - node
   - python
   - sops
-  - node
   - wget
   - zsh
   # - python3 # Installed in setup
@@ -14,21 +15,20 @@ homebrew_taps:
   - homebrew/cask-fonts
 homebrew_casks:
   # MacOS productivity tools
-  - alfred # License
+  - alfred3 # License
   - iterm2
   - bartender # License
   - fantastical # License
-  - the-unarchiver
+  # - the-unarchiver
   - android-file-transfer
   - transmission-remote-gui
-  - electorrent
   # Developer tools
   - miniconda
   - sublime-text
-  - atom
+  - visual-studio-code
   - insomnia
   - secure-pipes
-  - gitkraken
+  - fork
   - java
   - secure-pipes
   # Database tools
@@ -40,7 +40,6 @@ homebrew_casks:
   # General productivity tools
   - firefox
   - google-chrome
-  - dropbox
   - google-drive
   - skype
   # Media apps
@@ -54,8 +53,9 @@ homebrew_casks:
   - font-inconsolata
   # Self-hosted
   - bitwarden
-  - nextcloud
   - joplin
+  - nextcloud
+  - syncthing
 conda_channels:
   - conda-forge
 appstore_app_ids:
