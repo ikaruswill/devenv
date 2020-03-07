@@ -47,6 +47,3 @@
 
 - name: Configure dock
   include_tasks: tasks/dock.yml
-
-- name: Configure Atom
-  include_tasks: atom.yml
