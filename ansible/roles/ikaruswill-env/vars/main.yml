@@ -61,23 +61,21 @@ conda_channels:
 appstore_app_ids:
   - 937984704 # Amphetamine
   - 1176895641 # Spark
-  - 1003160018 # Quip
-  - 441258766 # Magnet
 dock_apps:
   - name: Fantastical 2
     path: /Applications/Fantastical 2.app
   - name: Spark
     path: /Applications/Spark.app
-  - name: Boostnote
-    path: /Applications/Boostnote.app
-  - name: Safari
-    path: /Applications/Safari.app
+  - name: Joplin
+    path: /Applications/Joplin.app
+  - name: Google Chrome
+    path: /Applications/Google\ Chrome.app
   - name: iTerm
     path: /Applications/iTerm.app
-  - name: Atom
-    path: /Applications/Atom.app
-  - name: GitKraken
-    path: /Applications/GitKraken.app
+  - name: Visual Studio Code
+    path: /Applications/Visual Studio Code.app
+  - name: Fork
+    path: /Applications/Fork.app
   - name: Rambox
     path: /Applications/Rambox.app
 dock_folders:
