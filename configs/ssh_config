@@ -2,13 +2,17 @@ Host tantalus
 	Hostname tantalus.ikaruswill.com
 	User admin
 
-Host bastion argent
-	HostName ikaruswill.com
-	User root
+Host argent bastion
+	Hostname ikaruswill.com
 	Port 2222
+	User root
 	IdentityFile ~/.ssh/argent
 
-Host o1 o2 o3 o4 o5 o6 
+Host aion
+	User admin
+	ProxyCommand ssh bastion -W %h:%p
+
+Host o1 o2 o3 o4 o5 o6
 	User pirate
 	IdentityFile ~/.ssh/octopi_admin
 	StrictHostKeyChecking no
@@ -23,13 +27,13 @@ Host k1 k2 k3 k4 k5 k6 k7
 	ProxyCommand ssh bastion -W %h:%p
 
 Host l1
-	User pirate
+	User pi
 	IdentityFile ~/.ssh/leviathan_admin
 	StrictHostKeyChecking no
 	UserKnownHostsFile /dev/null
 	ProxyCommand ssh bastion -W %h:%p
 
-Host octopi1 octopi2 octopi3 octopi4 octopi5 octopi6 
+Host octopi1 octopi2 octopi3 octopi4 octopi5 octopi6
 	User pirate
 	IdentityFile ~/.ssh/octopi_admin
 	StrictHostKeyChecking no
@@ -42,7 +46,7 @@ Host kraken1 kraken2 kraken3 kraken4 kraken5 kraken6 kraken7
 	UserKnownHostsFile /dev/null
 
 Host leviathan1
-	User pirate
+	User pi
 	IdentityFile ~/.ssh/leviathan_admin
 	StrictHostKeyChecking no
 	UserKnownHostsFile /dev/null
