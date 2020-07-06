@@ -1,7 +1,7 @@
 ---
 - name: Symlink miniconda3
   file:
-    src: /usr/local/miniconda3
+    src: /opt/miniconda3
     dest: /Users/{{ ansible_user }}/miniconda3
     owner: '{{ ansible_user }}'
     group: staff
